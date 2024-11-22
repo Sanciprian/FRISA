@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Profesional</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .detail {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: 40px auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .detail img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .detail h2 {
+            color: #3A6EA5;
+        }
+
+        .message-button {
+            background-color: #8CC084;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .message-button:hover {
+            background-color: #6EA26F;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="detail">
+        <img src="https://via.placeholder.com/150" alt="Foto">
+        <h2 id="name">Nombre</h2>
+        <p id="job">Oficio</p>
+        <p id="stars" style="color: gold; font-size: 18px;">★★★★★</p>
+        <button class="message-button">Enviar Mensaje</button>
+    </div>
+
+    <script>
+        // Get query parameters from the URL
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('name').textContent = params.get('name') || 'Nombre';
+        document.getElementById('job').textContent = params.get('job') || 'Oficio';
+        document.getElementById('stars').textContent = params.get('stars') || '★★★★☆';
+    </script>
+</body>
+
+</html>
