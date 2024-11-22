@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +10,15 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #3A6EA5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
         }
 
         .detail {
@@ -49,8 +57,11 @@
         }
     </style>
 </head>
-
 <body>
+    <header>
+        Cardenales - Servicios Profesionales
+    </header>
+
     <div class="detail">
         <img src="https://via.placeholder.com/150" alt="Foto">
         <h2 id="name">Nombre</h2>
@@ -67,5 +78,4 @@
         document.getElementById('stars').textContent = params.get('stars') || '★★★★☆';
     </script>
 </body>
-
 </html>
