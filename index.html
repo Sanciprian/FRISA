@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardenales - Servicios Profesionales</title>
+    <title>Detalle del Profesional</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            color: #333;
         }
 
         header {
@@ -23,57 +21,6 @@
             font-weight: bold;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 10px;
-        }
-
-        .profile {
-            display: flex;
-            align-items: center;
-            background: white;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .profile img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-right: 20px;
-            object-fit: cover;
-        }
-
-        .profile-content {
-            flex: 1;
-        }
-
-        .profile-name {
-            font-size: 18px;
-            font-weight: bold;
-            margin: 0;
-            color: #3A6EA5;
-        }
-
-        .profile-job {
-            font-size: 14px;
-            color: #555;
-            margin: 5px 0;
-        }
-
-        .stars {
-            color: gold;
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-
-        /* Detail Page */
         .detail {
             text-align: center;
             padding: 20px;
@@ -110,32 +57,25 @@
         }
     </style>
 </head>
-
 <body>
     <header>
         Cardenales - Servicios Profesionales
     </header>
 
-    <div class="container">
-        <!-- Profile Links -->
-        <a href="detail.html?name=Juan%20López&job=Plomero&stars=★★★★★" class="profile">
-            <img src="https://via.placeholder.com/100" alt="Plomero">
-            <div class="profile-content">
-                <p class="profile-name">Juan López</p>
-                <p class="profile-job">Plomero</p>
-                <p class="stars">★★★★★</p>
-            </div>
-        </a>
-        <a href="detail.html?name=María%20Rodríguez&job=Carpintera&stars=★★★★☆" class="profile">
-            <img src="https://via.placeholder.com/100" alt="Carpintero">
-            <div class="profile-content">
-                <p class="profile-name">María Rodríguez</p>
-                <p class="profile-job">Carpintera</p>
-                <p class="stars">★★★★☆</p>
-            </div>
-        </a>
-        <!-- Add more profiles as needed -->
+    <div class="detail">
+        <img src="https://via.placeholder.com/150" alt="Foto">
+        <h2 id="name">Nombre</h2>
+        <p id="job">Oficio</p>
+        <p id="stars" style="color: gold; font-size: 18px;">★★★★★</p>
+        <button class="message-button">Enviar Mensaje</button>
     </div>
-</body>
 
+    <script>
+        // Get query parameters from the URL
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('name').textContent = params.get('name') || 'Nombre';
+        document.getElementById('job').textContent = params.get('job') || 'Oficio';
+        document.getElementById('stars').textContent = params.get('stars') || '★★★★☆';
+    </script>
+</body>
 </html>
