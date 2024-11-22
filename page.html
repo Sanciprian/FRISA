@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardenales - Servicios Profesionales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #3A6EA5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .search-container {
+            background-color: #E8F0FE;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        .search-container input {
+            padding: 10px;
+            font-size: 16px;
+            width: 70%;
+            margin-bottom: 15px;
+            border: 2px solid #3A6EA5;
+            border-radius: 5px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-buttons button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #8CC084;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .filter-buttons button span {
+            font-size: 18px;
+            margin-right: 5px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+            border: 3px solid #F28B66;
+        }
+
+        .profile-content {
+            flex: 1;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            color: #3A6EA5;
+        }
+
+        .profile-job {
+            font-size: 14px;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .stars {
+            color: gold;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .review {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        Cardenales - Servicios Profesionales
+    </header>
+
+    <div class="search-container">
+        <input type="text" placeholder="Buscar por nombre o reseña...">
+        <div class="filter-buttons">
+            <button><span>🔧</span>Plomeros</button>
+            <button><span>🪚</span>Carpinteros</button>
+            <button><span>💡</span>Electricistas</button>
+            <button><span>🪜</span>Tabla Roqueros</button>
+            <button><span>🏗️</span>Albañiles</button>
+            <button><span>🧹</span>Empleadas Domésticas</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Perfiles dinámicos -->
+        <div class="profile">
+            <img src="https://via.placeholder.com/100" alt="Plomero">
+            <div class="profile-content">
+                <p class="profile-name">Juan López</p>
+                <p class="profile-job">Plomero</p>
+                <p class="stars">★★★★★</p>
+                <p class="review">"Excelente trabajo, muy puntual y profesional."</p>
+            </div>
+        </div>
+        <div class="profile">
+            <img src="https://via.placeholder.com/100" alt="Carpintero">
+            <div class="profile-content">
+                <p class="profile-name">María Rodríguez</p>
+                <p class="profile-job">Carpintera</p>
+                <p class="stars">★★★★☆</p>
+                <p class="review">"Buen trabajo, aunque tardó un poco más de lo esperado."</p>
+            </div>
+        </div>
+        <div class="profile">
+            <img src="https://via.placeholder.com/100" alt="Electricista">
+            <div class="profile-content">
+                <p class="profile-name">Pedro Hernández</p>
+                <p class="profile-job">Electricista</p>
+                <p class="stars">★★★★★</p>
+                <p class="review">"Muy eficiente y con excelente actitud."</p>
+            </div>
+        </div>
+        <!-- Agregar más perfiles -->
+    </div>
+</body>
+
+</html>
